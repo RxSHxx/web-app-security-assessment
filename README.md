@@ -87,7 +87,18 @@ The application relied on client-supplied data for critical business logic (tick
 | **Kali Linux** | Testing environment |
 
 ---
+## Skills Demonstrated
+- Web Application Security Testing
+- Vulnerability Assessment
+- Parameter Tampering Testing
+- HTTP Request Analysis
+- Burp Suite
+- OWASP Top 10
+- Kali Linux
+- HTTP/HTTPS Protocol Understanding
+- Security Documentation & Reporting
 
+- ---
 ## Author
 **Rishivardhan V**
 - B.E – Computer Science and Engineering (Cyber Security)
