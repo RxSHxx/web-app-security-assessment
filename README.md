@@ -98,9 +98,19 @@ The application relied on client-supplied data for critical business logic (tick
 - HTTP/HTTPS Protocol Understanding
 - Security Documentation & Reporting
 
-- ---
+---
+## Disclaimer
+This project is intended for educational and learning purposes only.
+All identifying information about the tested application has been removed.
+No sensitive data, credentials, or proprietary information are disclosed.
+This assessment was conducted in a controlled environment for learning purposes.
+The techniques demonstrated should only be used on systems you have explicit
+permission to test.
+
+---
 ## Author
 **Rishivardhan V**
 - B.E – Computer Science and Engineering (Cyber Security)
 - S.A Engineering College, Chennai
 - 📧 rishivardhan211006@gmail.com
+
