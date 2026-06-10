@@ -207,8 +207,8 @@ def checkout(request):
 - B.E – Computer Science and Engineering (Cyber Security)
 - S.A Engineering College, Chennai
 - 📧 rishivardhan211006@gmail.com
-- 🔗 LinkedIn: linkedin.com/in/your-profile
-- 🐙 GitHub: github.com/your-username
+- 🔗 LinkedIn: linkedin.com/in/rishivardhan-v-050426383
+- 🐙 GitHub: github.com/rishivardhan-v
 
 ---
 
