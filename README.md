@@ -62,7 +62,7 @@ ticket_id=1023&price=1&seat=A1
 
 Shows the original ticket price displayed to the user before any manipulation.
 
-![Original Ticket Listing](screenshots/01-original-ticket-listing.png)
+![Original Ticket Listing](screenshots/Screenshot 2026-06-09 224952.png)
 
 ---
 
