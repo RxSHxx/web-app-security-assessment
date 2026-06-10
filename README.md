@@ -54,6 +54,71 @@ ticket_id=1023&price=1&seat=A1
 
 ---
 
+## Proof of Concept – Screenshots
+
+> ⚠️ All identifying information has been redacted from screenshots to protect the target application.
+
+**Screenshot 1 – Original Ticket Listing**
+
+Shows the original ticket price displayed to the user before any manipulation.
+
+![Original Ticket Listing](screenshots/01-original-ticket-listing.png)
+
+---
+
+**Screenshot 2 – Seat Selection Page**
+
+Shows the seat selection page with the legitimate ticket price visible before booking.
+
+![Seat Selection](screenshots/02-seat-selection.png)
+
+---
+
+**Screenshot 3 – Burp Suite Intercept (Request Headers)**
+
+Burp Suite intercepting the POST request to `/passenger-info` endpoint. Shows the HTTP headers of the captured request.
+
+![Burp Suite Intercept Headers](screenshots/03-burpsuite-intercept-headers.png)
+
+---
+
+**Screenshot 4 – Burp Suite Intercept (Request Body)**
+
+The full URL-encoded POST body intercepted by Burp Suite. The fare parameter containing the original price value (₹705) is visible and highlighted.
+
+![Burp Suite Intercept Body](screenshots/04-burpsuite-intercept-body.png)
+
+---
+
+**Screenshot 5 – Modified Request**
+
+The fare parameter has been modified to an unauthorized value. The modified request is forwarded to the server.
+
+![Modified Request](screenshots/05-modified-request.png)
+
+---
+
+**Screenshot 6 – Server Response (Price Manipulation Confirmed)**
+
+The server accepted the manipulated request. Fare Details now show:
+- Bus Fare: ₹35
+- Discount: ₹35
+- **Grand Total: ₹0.00**
+
+This confirms the server did not validate the fare on the backend.
+
+![Price Manipulation Result](screenshots/06-price-manipulation-result.png)
+
+---
+
+**Screenshot 7 – Final Confirmation (Grand Total = ₹0.00)**
+
+Final booking page confirming the Grand Total is ₹0.00 — demonstrating successful parameter tampering.
+
+![Final Confirmation](screenshots/07-final-confirmation.png)
+
+---
+
 ## Root Cause
 The application relied on client-supplied data for critical business logic (ticket pricing) without implementing server-side validation. The server did not verify whether the submitted price matched the actual price stored in the database.
 
@@ -87,6 +152,7 @@ The application relied on client-supplied data for critical business logic (tick
 | **Kali Linux** | Testing environment |
 
 ---
+
 ## Skills Demonstrated
 - Web Application Security Testing
 - Vulnerability Assessment
@@ -99,6 +165,17 @@ The application relied on client-supplied data for critical business logic (tick
 - Security Documentation & Reporting
 
 ---
+
+## Author
+**Rishivardhan V**
+- B.E – Computer Science and Engineering (Cyber Security)
+- S.A Engineering College, Chennai
+- 📧 rishivardhan211006@gmail.com
+- 🔗 LinkedIn: linkedin.com/in/your-profile
+- 🐙 GitHub: github.com/your-username
+
+---
+
 ## Disclaimer
 This project is intended for educational and learning purposes only.
 All identifying information about the tested application has been removed.
@@ -106,11 +183,3 @@ No sensitive data, credentials, or proprietary information are disclosed.
 This assessment was conducted in a controlled environment for learning purposes.
 The techniques demonstrated should only be used on systems you have explicit
 permission to test.
-
----
-## Author
-**Rishivardhan V**
-- B.E – Computer Science and Engineering (Cyber Security)
-- S.A Engineering College, Chennai
-- 📧 rishivardhan211006@gmail.com
-
