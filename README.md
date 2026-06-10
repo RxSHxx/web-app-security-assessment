@@ -62,7 +62,7 @@ ticket_id=1023&price=1&seat=A1
 
 Shows the original ticket price displayed to the user before any manipulation.
 
-![Original Ticket Listing](screenshots/01-original-ticket-listing.png)
+![Original Ticket Listing](screenshots/Screenshot%202026-06-09%20224952.png)
 
 ---
 
@@ -70,7 +70,7 @@ Shows the original ticket price displayed to the user before any manipulation.
 
 Shows the seat selection page with the legitimate ticket price visible before booking.
 
-![Seat Selection](screenshots/02-seat-selection.png)
+![Seat Selection](screenshots/Screenshot%202026-06-09%20225020.png)
 
 ---
 
@@ -78,7 +78,7 @@ Shows the seat selection page with the legitimate ticket price visible before bo
 
 Burp Suite intercepting the POST request to `/passenger-info` endpoint. Shows the HTTP headers of the captured request.
 
-![Burp Suite Intercept Headers](screenshots/03-burpsuite-intercept-headers.png)
+![Burp Suite Intercept Headers](screenshots/Screenshot%202026-06-09%20225143.png)
 
 ---
 
@@ -86,7 +86,7 @@ Burp Suite intercepting the POST request to `/passenger-info` endpoint. Shows th
 
 The full URL-encoded POST body intercepted by Burp Suite. The fare parameter containing the original price value (₹705) is visible and highlighted.
 
-![Burp Suite Intercept Body](screenshots/04-burpsuite-intercept-body.png)
+![Burp Suite Intercept Body](screenshots/Screenshot%202026-06-09%20225152.png)
 
 ---
 
@@ -94,7 +94,7 @@ The full URL-encoded POST body intercepted by Burp Suite. The fare parameter con
 
 The fare parameter has been modified to an unauthorized value. The modified request is forwarded to the server.
 
-![Modified Request](screenshots/05-modified-request.png)
+![Modified Request](screenshots/Screenshot%202026-06-09%20225543.png)
 
 ---
 
@@ -107,7 +107,7 @@ The server accepted the manipulated request. Fare Details now show:
 
 This confirms the server did not validate the fare on the backend.
 
-![Price Manipulation Result](screenshots/06-price-manipulation-result.png)
+![Price Manipulation Result](screenshots/Screenshot%202026-06-09%20225621.png)
 
 ---
 
@@ -115,7 +115,7 @@ This confirms the server did not validate the fare on the backend.
 
 Final booking page confirming the Grand Total is ₹0.00 — demonstrating successful parameter tampering.
 
-![Final Confirmation](screenshots/07-final-confirmation.png)
+![Final Confirmation](screenshots/Screenshot%202026-06-09%20225703.png)
 
 ---
 
