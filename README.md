@@ -157,13 +157,19 @@ def checkout(request):
     return process_payment(user_provided_fare)
 
 
-# ✅ SECURE IMPLEMENTATION
+# ✅ SECURE IMPLEMENTATION (With error handling)
 # Ignores client-supplied fare — fetches authoritative price from database
 def checkout(request):
     schedule_id = request.POST.get('schedule_id')
     seat = request.POST.get('seat')
+
     # Server looks up the real price — client cannot influence this value
     authorized_fare = Database.get_fare_by_schedule(schedule_id, seat)
+
+    # Validate the result before processing — prevents crashes and logic errors
+    if not authorized_fare:
+        return error_response("Invalid booking details", status=400)
+
     return process_payment(authorized_fare)
 ```
 
